@@ -1,23 +1,25 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import Profile from './Components/Profile/Profile';
+import Content from './Components/Content/Content';
+import PostList from './Services/post.service';
 
-function App() {
+const App = () => {
+
+  const [authState, setAuthState] = useState(false)
+  
+  function changeAuthState() {
+    setAuthState(authState ? false : true)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header isAuth={authState}/>
+      <div className='header'></div>
+      <button onClick={changeAuthState}>Change auth state</button>
+      <Profile isAuth={authState}/>
+      <Content posts={PostList} isAuth={authState}/>
     </div>
   );
 }

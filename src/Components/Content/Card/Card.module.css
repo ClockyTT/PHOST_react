@@ -1,0 +1,30 @@
+.Card{
+    width: 300px;
+    height: 350px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.frstLine{
+    display: flex;
+    justify-content: space-between;
+}
+.liked{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 68, 68);
+    border-radius: 50%;
+}
+.noLiked{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

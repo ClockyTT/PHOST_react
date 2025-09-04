@@ -1,0 +1,17 @@
+.Content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    max-width: 100%;
+}
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: auto;
+    max-width:fit-content;
+    box-sizing: border-box;
+}

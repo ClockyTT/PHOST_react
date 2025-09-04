@@ -1,0 +1,14 @@
+.Profile{
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+}
+
+.avatar{
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+}
+
+
