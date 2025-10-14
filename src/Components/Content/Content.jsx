@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import classes from './Content.module.css'
-import Card from './Card/Card'
+import GuestCard from './Card/GuestCard'
+import UserCard from './Card/UserCard'
 
 const Content = (props) => {
   // let posts = props.posts;
+  let isAuth = props.isAuth;
   let posts = [
     {id: 1, name: 'user1', description: 'my new image'},
     {id: 2, name: 'user2', description: 'my new photo'},
@@ -18,7 +20,10 @@ const Content = (props) => {
       <div className={classes.Cards}>
         {posts.length? (
           posts.map(post => (
-            <Card key={post.id} post={post}/>
+            isAuth? (
+              <UserCard key={post.id} post={post}/>
+            ):
+            <GuestCard key={post.id} post={post}/>
           ))):
         <div>No cards yet</div>}
       </div>

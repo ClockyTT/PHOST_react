@@ -4,22 +4,18 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Profile from './Components/Profile/Profile';
 import Content from './Components/Content/Content';
-import PostList from './Services/post.service';
+import { useDispatch, useSelector } from 'react-redux';
 
 const App = () => {
-
-  const [authState, setAuthState] = useState(false)
   
-  function changeAuthState() {
-    setAuthState(authState ? false : true)
-  }
+  const authState = useSelector(state => state)
+
   return (
     <div className="App">
       <Header isAuth={authState}/>
       <div className='header'></div>
-      <button onClick={changeAuthState}>Change auth state</button>
       <Profile isAuth={authState}/>
-      <Content posts={PostList} isAuth={authState}/>
+      <Content isAuth={authState}/>
     </div>
   );
 }

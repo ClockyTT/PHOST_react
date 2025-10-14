@@ -17,14 +17,17 @@
     display: flex;
     justify-content: space-between;
 }
-.liked{
-    width: 50px;
-    height: 50px;
-    background-color: rgb(255, 68, 68);
-    border-radius: 50%;
+.likeButton {
+    background-color: transparent;
+    color: grey;
 }
-.noLiked{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.likeButton:hover {
+    background-color: transparent !important;
+    color: #555;
+}
+.liked {
+    color: crimson !important;
+}
+.liked:hover {
+    color: darkred !important;
 }
