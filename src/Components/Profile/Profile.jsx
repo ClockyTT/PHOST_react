@@ -4,7 +4,7 @@ const Profile = () => {
     return (
       <div className={classes.Profile}>
         <img className={classes.avatar} src='avatar.png' alt="profile"/>
-        <h1>Neytiri12</h1>
+        <h1 className={classes.name}>Neytiri12</h1>
       </div>
     );
   }

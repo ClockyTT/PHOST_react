@@ -8,15 +8,13 @@ import { store } from '../../Store';
 
 const Header = (props) => {
 
-  const isAuth = store.getState()
-
   return (
     <div className={classes.Header}>
       <div>
         <img className={classes.image} src='logo.png' alt="logo"/>
       </div>
       <Search/>
-      {isAuth?
+      {props.isAuth?
           (<UserNav />):(<GuestNav />)
       }
     </div>

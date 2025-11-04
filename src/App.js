@@ -4,18 +4,20 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Profile from './Components/Profile/Profile';
 import Content from './Components/Content/Content';
-import { useDispatch, useSelector } from 'react-redux';
+import ModalAuth from './Components/Authentification/ModalAuth';
+import { useSelector } from 'react-redux';
 
 const App = () => {
   
-  const authState = useSelector(state => state)
+  const authState = useSelector(state => state.auth)
 
   return (
     <div className="App">
-      <Header isAuth={authState}/>
+      <Header isAuth={authState.isAuth}/>
       <div className='header'></div>
-      <Profile isAuth={authState}/>
-      <Content isAuth={authState}/>
+      <Profile isAuth={authState.isAuth}/>
+      <Content isAuth={authState.isAuth}/>
+      <ModalAuth/>
     </div>
   );
 }

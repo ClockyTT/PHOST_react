@@ -1,5 +1,5 @@
 .Profile{
-    height: fit-content;
+    height: auto;
     align-items: center;
     justify-content: space-between;
     background-color: blanchedalmond;
@@ -11,4 +11,7 @@
     border-radius: 50%;
 }
 
-
+.name{
+    margin: 0px;
+    padding: 10px;
+}

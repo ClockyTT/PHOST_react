@@ -1,4 +1,8 @@
-import { legacy_createStore as createStore } from "redux"
-import { logReducer } from "./Reducers/logReducer"
+import { legacy_createStore as createStore, combineReducers } from "redux"
+import { authReducer } from "./Reducers/authReducer"
 
-export const store = createStore(logReducer)
+const rootReducer = combineReducers({
+    auth: authReducer,
+})
+
+export const store = createStore(rootReducer)

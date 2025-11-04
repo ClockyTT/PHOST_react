@@ -6,14 +6,13 @@ const GuestNav = (props) => {
 
   const dispatch = useDispatch()
 
-  const changeAuthState = () => {
-    dispatch({type:"CHANGE_STATE"})
+  const openModal = () => {
+    dispatch({type:"OPEN_LOG_MODAL"})
   }
 
   return (
     <div> 
-      <button onClick={changeAuthState}>Log in</button>
-      <button>Sign up</button>
+      <button className={classes.logButton} onClick={openModal}>Log in</button>
     </div>
   );
 }
