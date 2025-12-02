@@ -1,17 +1,17 @@
-.Profile{
-    height: auto;
-    align-items: center;
-    justify-content: space-between;
-    background-color: blanchedalmond;
+.Profile {
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blanchedalmond;
 }
 
-.avatar{
-    height: 150px;
-    width: auto;
-    border-radius: 50%;
+.avatar {
+  height: 150px;
+  width: auto;
+  border-radius: 50%;
 }
 
-.name{
-    margin: 0px;
-    padding: 10px;
+.name {
+  margin: 0px;
+  padding: 10px;
 }

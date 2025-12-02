@@ -1,21 +1,21 @@
-.input{
-    align-items: center;
-    height: 30px;
-    margin: 10px;
-    width: 80%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+.input {
+  align-items: center;
+  height: 30px;
+  margin: 10px;
+  width: 80%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.errors{
-    color: red;
-    margin: 0px;
-    margin-left: 22px;
-    font-size: 0.8rem;
+.errors {
+  color: red;
+  margin: 0px;
+  margin-left: 22px;
+  font-size: 0.8rem;
 }
 
 .avatarSection {

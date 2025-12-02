@@ -1,22 +1,25 @@
 import React from "react";
-import classes from '../Header.module.css';
-import { useDispatch } from "react-redux";
-import { store } from '../../../Store';
+import classes from "../Header.module.css";
+import { useSelector, useDispatch } from "react-redux";
 
 const UserNav = (props) => {
+  const profile = useSelector((state) => state.auth.userProfile);
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  const changeAuthState = () => {
-    dispatch({type:"CHANGE_AUTH_STATE"})
-    // console.log(store.getState().auth)
-  }
+  const logout = () => {
+    dispatch({ type: "LOG_OUT" });
+  };
 
   return (
     <div>
-      <img onClick={changeAuthState} className={classes.image} src="avatar.png" alt="profile" />
+      <img
+        onClick={logout}
+        className={classes.image}
+        src={profile?.userAvatar || "avatar.png"}
+        alt="profile"
+      />
     </div>
   );
-}
+};
 
 export default UserNav;

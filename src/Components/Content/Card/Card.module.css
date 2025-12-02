@@ -1,33 +1,48 @@
-.Card{
-    width: 300px;
-    height: 350px;
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-    margin: 25px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+.Card {
+  width: 300px;
+  height: 350px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  margin: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
-.frstLine{
-    display: flex;
-    justify-content: space-between;
+
+.imgBox {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+.img {
+  border-radius: 10px;
+  margin: auto;
+  max-width: 100%;
+}
+
+.frstLine {
+  display: flex;
+  justify-content: space-between;
 }
 .likeButton {
-    background-color: transparent;
-    color: grey;
+  background-color: transparent;
+  color: grey;
 }
 .likeButton:hover {
-    background-color: transparent !important;
-    color: #555;
+  background-color: transparent !important;
+  color: #555;
 }
 .liked {
-    color: crimson !important;
+  color: crimson !important;
 }
 .liked:hover {
-    color: darkred !important;
+  color: darkred !important;
 }

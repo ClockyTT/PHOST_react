@@ -1,27 +1,26 @@
 const initialState = {
-  isModalOpen: false,
-  isAuth: false,
+  isAuth: !!localStorage.getItem("accessToken"),
+  accesToken: localStorage.getItem("accessToken") || null,
+  userProfile: null,
 };
 
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "CHANGE_AUTH_STATE":
+    case "LOG_IN":
       return {
         ...state,
-        isAuth: !state.isAuth,
-        isModalOpen: state.isAuth ? state.isModalOpen : false,
+        isAuth: true,
+        accesToken: action.payload?.accesToken || state.accesToken,
+        userProfile: action.payload?.userProfile || null,
       };
 
-    case "OPEN_LOG_MODAL":
+    case "LOG_OUT":
+      localStorage.removeItem("accessToken");
       return {
         ...state,
-        isModalOpen: true,
-      };
-
-    case "CLOSE_LOG_MODAL":
-      return {
-        ...state,
-        isModalOpen: false,
+        isAuth: false,
+        accesToken: null,
+        userProfile: null,
       };
 
     default:

@@ -1,20 +1,21 @@
-import TextField from '@mui/material/TextField';
-import classes from './ModalAuth.module.css'
+import TextField from "@mui/material/TextField";
+import classes from "./ModalAuth.module.css";
 
 const DefaultInputs = (props) => {
-
   return (
     <div>
       <div>
         <input
           className={classes.input}
-          type="email"
-          placeholder="Email"
-          value={props.email}
-          onChange={(e) => props.setEmail(e.target.value)}
+          type="userName"
+          placeholder="User Name"
+          value={props.userName}
+          onChange={(e) => props.setUserName(e.target.value)}
           required
         />
-        {props.errors.email && <p className={classes.errors}>{props.errors.email}</p>}
+        {props.errors.userName && (
+          <p className={classes.errors}>{props.errors.userName}</p>
+        )}
       </div>
 
       <div>
@@ -22,14 +23,16 @@ const DefaultInputs = (props) => {
           className={classes.input}
           type="password"
           placeholder="Password"
-          value={props.password}
-          onChange={(e) => props.setPassword(e.target.value)}
+          value={props.userPass}
+          onChange={(e) => props.setUserPass(e.target.value)}
           required
         />
-        {props.errors.password && <p className={classes.errors}>{props.errors.password}</p>}
+        {props.errors.userPass && (
+          <p className={classes.errors}>{props.errors.userPass}</p>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default DefaultInputs;
